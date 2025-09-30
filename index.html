@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Cours QVCT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+        
+        .cours-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .cours-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .cours-item::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 25px;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border: 3px solid #667eea;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #f8f9ff;
+        }
+        
+        .date {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .module-code {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .module-title {
+            font-size: 1.05em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .session-info {
+            color: #666;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+        
+        .total-hours {
+            color: #764ba2;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .special-note {
+            background: #fff4e6;
+            border-left-color: #ff9800;
+            border-left-width: 4px;
+        }
+        
+        .special-note .module-code {
+            background: #ff9800;
+        }
+        
+        .special-note::before {
+            border-color: #ff9800;
+        }
+        
+        .cas-pratique {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+        
+        .cas-pratique .module-code {
+            background: #4caf50;
+        }
+        
+        .cas-pratique::before {
+            border-color: #4caf50;
+        }
+        
+        .month-separator {
+            text-align: center;
+            margin: 40px 0 25px 0;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #764ba2;
+            position: relative;
+        }
+        
+        .month-separator::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #764ba2, transparent);
+            margin: 10px auto 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Planning de Formation QVCT</h1>
+        <div class="subtitle">Novembre 2025 - Mai 2026</div>
+        
+        <div class="timeline">
+            <div class="month-separator">🍂 Novembre 2025</div>
+            
+            <div class="cours-item">
+                <div class="date">📅 Jeudi 27 novembre 2025</div>
+                <span class="module-code">M4-1a</span>
+                <div class="module-title">Gestion d'un projet QVT et accompagnement au projet</div>
+                <div class="session-info">Cours 1/2 • <span class="total-hours">Total module : 14h</span></div>
+            </div>
+            
+            <div class="month-separator">❄️ Décembre 2025</div>
+            
+            <div class="cours-item">
+                <div class="date">📅 Jeudi 18 décembre 2025</div>
+                <span class="module-code">M4-1a</span>
+                <div class="module-title">Gestion d'un projet QVT et accompagnement au projet</div>
+                <div class="session-info">Cours 2/2 • <span class="total-hours">Total module : 14h</span></div>
+            </div>
+            
+            <div class="month-separator">❄️ Février 2026</div>
+            
+            <div class="cours-item">
+                <div class="date">📅 Mardi 3 février 2026</div>
+                <span class="module-code">M4-1b</span>
+                <div class="module-title">Gestion d'un projet QVT et accompagnement au projet</div>
+                <div class="session-info">Cours 1/3 • <span class="total-hours">Total module : 21h</span></div>
+            </div>
+            
+            <div class="cours-item special-note">
+                <div class="date">📅 Jeudi 5 février 2026</div>
+                <span class="module-code">M4-4</span>
+                <div class="module-title">Conduite des plans d'amélioration de la QVT</div>
+                <div class="session-info">⚠️ 2 cours en 1 journée • Cours 1/2 • <span class="total-hours">Total module : 21h</span></div>
+            </div>
+            
+            <div class="cours-item">
+                <div class="date">📅 Vendredi 6 février 2026</div>
+                <span class="module-code">M4-1b</span>
+                <div class="module-title">Gestion d'un projet QVT et accompagnement au projet</div>
+                <div class="session-info">Cours 2/3 • <span class="total-hours">Total module : 21h</span></div>
+            </div>
+            
+            <div class="month-separator">🌸 Mars 2026</div>
+            
+            <div class="cours-item special-note">
+                <div class="date">📅 Mercredi 4 mars 2026</div>
+                <span class="module-code">M4-2</span>
+                <div class="module-title">Communication interne sur les RPS, sécurité, santé et QVT</div>
+                <div class="session-info">⚠️ 2 cours en 1 journée • <span class="total-hours">Total module : 14h</span></div>
+            </div>
+            
+            <div class="cours-item">
+                <div class="date">📅 Lundi 23 mars 2026</div>
+                <span class="module-code">M4-1b</span>
+                <div class="module-title">Gestion d'un projet QVT et accompagnement au projet</div>
+                <div class="session-info">Cours 3/3 • <span class="total-hours">Total module : 21h</span></div>
+            </div>
+            
+            <div class="month-separator">🌷 Avril 2026</div>
+            
+            <div class="cours-item cas-pratique">
+                <div class="date">📅 Lundi 20 avril 2026</div>
+                <span class="module-code">CAS PRATIQUE</span>
+                <div class="module-title">Cas Pratique QVCT</div>
+                <div class="session-info">Jour 1/3</div>
+            </div>
+            
+            <div class="cours-item cas-pratique">
+                <div class="date">📅 Mardi 21 avril 2026</div>
+                <span class="module-code">CAS PRATIQUE</span>
+                <div class="module-title">Cas Pratique QVCT</div>
+                <div class="session-info">Jour 2/3</div>
+            </div>
+            
+            <div class="cours-item cas-pratique">
+                <div class="date">📅 Mercredi 22 avril 2026</div>
+                <span class="module-code">CAS PRATIQUE</span>
+                <div class="module-title">Cas Pratique QVCT</div>
+                <div class="session-info">Jour 3/3</div>
+            </div>
+            
+            <div class="month-separator">🌺 Mai 2026</div>
+            
+            <div class="cours-item">
+                <div class="date">📅 Lundi 11 mai 2026</div>
+                <span class="module-code">M4-4</span>
+                <div class="module-title">Conduite des plans d'amélioration de la QVT</div>
+                <div class="session-info">Cours 2/2 • <span class="total-hours">Total module : 21h</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
